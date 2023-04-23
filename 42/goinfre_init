@@ -18,18 +18,15 @@ cprint() {
   esac
 }
 
-# git basic settings
-git config --global user.name "Sungwoo Park"
-git config --global user.email codest99@gmail.com
+# reset goinfre file
+# TODO: Make options to choose reset or not
+rm -rf ~/goinfre/*
+mkdir ~/goinfre/app
 
-# Insatll Latest VSCode
-cprint yellow "Insatll Latest VSCode..."
-# wget https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal
-
-: <<'END'
-# run vscode in terminal
-export PATH="${PATH}:/Users/sunpark/goinfre/app/Visual Studio Code.app/Contents/Resources/app/bin"
-END
+# Install Latest VSCode
+cprint yellow "Install Latest VSCode..."
+curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal
+" > ~/goinfre/app/code.zip
 
 # Install Brew
 # echo "${YELLOW}test"

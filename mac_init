@@ -1,3 +1,11 @@
 #! /usr/bin/env zsh
 
+# git basic settings
+git config --global user.name "Sungwoo Park"
+git config --global user.email codest99@gmail.com
 
+# TODO: add this line to .zshrc
+: <<'END'
+# run vscode in terminal
+export PATH="${PATH}:/Users/sunpark/goinfre/app/Visual Studio Code.app/Contents/Resources/app/bin"
+END

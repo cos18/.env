@@ -43,13 +43,12 @@ mkdir ~/goinfre/.poetry
 cprint yellow "Install Latest Brew..."
 git clone --depth=1 https://github.com/Homebrew/brew $brewPath/.brew && source $HOME/.zshrc 2>/dev/null && brew update
 brewPath="$(brew --prefix)"
-cprint yello $brewPath
 
 # Install pyenv
 brew install pyenv
 brew install xz
-pyenv install 3.11.3
-pyenv global 3.11.3
+pyenv install 3.10.11
+pyenv global 3.10.11
 
 # Install poetry
-curl -sSL https://install.python-poetry.org | POETRY_HOME=/Users/sunpark/goinfre/.poetry python
+curl -sSL https://install.python-poetry.org | POETRY_HOME=/Users/sunpark/goinfre/.poetry python3

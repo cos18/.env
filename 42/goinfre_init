@@ -44,6 +44,11 @@ cprint yellow "Install Latest Brew..."
 git clone --depth=1 https://github.com/Homebrew/brew $brewPath/.brew && source $HOME/.zshrc 2>/dev/null && brew update
 brewPath="$(brew --prefix)"
 
+# Install ncdu@1
+brew tap OctopusET/42
+brew install ncdu@1
+brew link ncdu@1
+
 # Install pyenv
 brew install pyenv
 brew install xz

@@ -21,10 +21,9 @@ cprint() {
 # reset goinfre file
 # TODO: Make options to choose reset or not
 cprint yellow "Reset goinfre..."
-rm -rf ~/goinfre/app
-rm -rf ~/goinfre/.poetry
-rm -rf ~/goinfre/.brew
-rm -rf ~/goinfre/.pyenv
+cd ~/goinfre
+ls -A1 | xargs rm -rf
+cd
 
 mkdir ~/goinfre/app
 mkdir ~/goinfre/.poetry

@@ -28,14 +28,8 @@ cd
 mkdir ~/goinfre/app
 mkdir ~/goinfre/.poetry
 
-
 # Install Latest VSCode
 # TODO: check VSCode ssh error
-
-# cprint yellow "Install Latest VSCode..."
-
-# curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" > ~/goinfre/app/code.zip
-# unzip ~/goinfre/app/code.zip -d ~/goinfre/app
 
 
 # Install Brew
@@ -56,3 +50,8 @@ pyenv global 3.10.11
 
 # Install poetry
 curl -sSL https://install.python-poetry.org | POETRY_HOME=/Users/sunpark/goinfre/.poetry python3
+
+# Install VSCode
+cprint yellow "Install Latest VSCode..."
+curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" > ~/goinfre/app/code.zip
+unzip -qq ~/goinfre/app/code.zip -d ~/goinfre/app

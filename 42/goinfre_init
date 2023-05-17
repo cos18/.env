@@ -48,10 +48,15 @@ brew install xz
 pyenv install 3.10.11
 pyenv global 3.10.11
 
+source $HOME/.zshrc 2>/dev/null
+
 # Install poetry
-curl -sSL https://install.python-poetry.org | POETRY_HOME=/Users/sunpark/goinfre/.poetry python3
+curl -sSL https://install.python-poetry.org | python3 -
 
 # Install VSCode
 cprint yellow "Install Latest VSCode..."
 curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" > ~/goinfre/app/code.zip
 unzip -qq ~/goinfre/app/code.zip -d ~/goinfre/app
+rm -rf ~/goinfre/app/code.zip
+
+source $HOME/.zshrc 2>/dev/null

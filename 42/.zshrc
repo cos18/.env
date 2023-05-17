@@ -112,9 +112,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export GOINFRE="/Users/sunpark/goinfre"
+export GOINFRE="~/goinfre"
 
-export PATH="/Users/sunpark/goinfre/app/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
+export PATH="${GOINFRE}/app/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
 
 # brew
 export brewPath="${GOINFRE}"
@@ -125,4 +125,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 export POETRY_CACHE_DIR="${PYENV_ROOT}/Caches"
 eval "$(pyenv init -)"
 
-export PATH="/Users/sunpark/goinfre/.poetry/bin:$PATH"
+export POETRY_HOME="${GOINFRE}/.poetry"
+export PATH="${POETRY_HOME}/bin:$PATH"

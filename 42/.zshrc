@@ -112,12 +112,13 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export GOINFRE="~/goinfre"
+export GOINFRE="/Users/${USER}/goinfre"
 
 export PATH="${GOINFRE}/app/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
 
 # brew
 export brewPath="${GOINFRE}"
+export HOMEBREW_CACHE="${brewPath}/.brew/cache"
 export PATH="${brewPath}/.brew/bin:${PATH}"
 
 export PYENV_ROOT="${GOINFRE}/.pyenv"

@@ -27,10 +27,15 @@ cd
 
 mkdir ~/goinfre/app
 mkdir ~/goinfre/.poetry
+mkdir ~/goinfre/.vagrant.d
 
 # Install Latest VSCode
-# TODO: check VSCode ssh error
+cprint yellow "Install Latest VSCode..."
+curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" > ~/goinfre/app/code.zip
+unzip -qq ~/goinfre/app/code.zip -d ~/goinfre/app
+rm -rf ~/goinfre/app/code.zip
 
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0 && killall Dock
 
 # Install Brew
 cprint yellow "Install Latest Brew..."
@@ -38,25 +43,23 @@ git clone --depth=1 https://github.com/Homebrew/brew $brewPath/.brew && source $
 brewPath="$(brew --prefix)"
 
 # Install ncdu@1
-brew tap OctopusET/42
-brew install ncdu@1
-brew link ncdu@1
+#brew tap OctopusET/42
+#brew install ncdu@1
+#brew link ncdu@1
 
 # Install pyenv
 brew install pyenv
 brew install xz
-pyenv install 3.10.11
-pyenv global 3.10.11
+pyenv install 3.10.12
+pyenv global 3.10.12
 
 source $HOME/.zshrc 2>/dev/null
 
 # Install poetry
-curl -sSL https://install.python-poetry.org | python3 -
-
-# Install VSCode
-cprint yellow "Install Latest VSCode..."
-curl -L "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal" > ~/goinfre/app/code.zip
-unzip -qq ~/goinfre/app/code.zip -d ~/goinfre/app
-rm -rf ~/goinfre/app/code.zip
-
+curl -sSL https://install.python-poetry.org | python -
 source $HOME/.zshrc 2>/dev/null
+
+pip install pre-commit
+
+# brew install libpq
+# brew link --force libpq

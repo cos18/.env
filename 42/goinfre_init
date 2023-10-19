@@ -27,7 +27,6 @@ cd
 
 mkdir ~/goinfre/app
 mkdir ~/goinfre/.poetry
-mkdir ~/goinfre/.vagrant.d
 
 # Install Latest VSCode
 cprint yellow "Install Latest VSCode..."

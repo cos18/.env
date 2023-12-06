@@ -36,10 +36,14 @@ rm -rf ~/goinfre/app/code.zip
 
 defaults write com.apple.systempreferences AttentionPrefBundleIDs 0 && killall Dock
 
+source $HOME/.zshrc 2>/dev/null
+
 # Install Brew
 cprint yellow "Install Latest Brew..."
 git clone --depth=1 https://github.com/Homebrew/brew $brewPath/.brew && source $HOME/.zshrc 2>/dev/null && brew update
 brewPath="$(brew --prefix)"
+
+source $HOME/.zshrc 2>/dev/null
 
 # Install ncdu@1
 #brew tap OctopusET/42
@@ -49,8 +53,8 @@ brewPath="$(brew --prefix)"
 # Install pyenv
 brew install pyenv
 brew install xz
-pyenv install 3.10.12
-pyenv global 3.10.12
+pyenv install 3.10.13
+pyenv global 3.10.13
 
 source $HOME/.zshrc 2>/dev/null
 
